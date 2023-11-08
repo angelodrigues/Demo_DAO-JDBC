@@ -9,7 +9,7 @@ import model.Seller;
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
 
-public class Program {
+public class ProgramSeller {
     public static void main(String[] args) throws Exception {
 
         Scanner sc = new Scanner(System.in);
