@@ -32,10 +32,16 @@ public class Program {
         for (Seller obj : list) {
             System.out.println(obj);
         }
-        System.out.println("\n=== TESTE 3: Seller findAll ===");        
+        System.out.println("\n=== TESTE 4: Seller insert ===");        
         Seller newSeller = new Seller(null, "Yasmim", "yasmim@gmail.com", new Date(), 5000.0, department);
 
         sellerDao.insert(newSeller);
         System.out.println("Inserted! New id = " + newSeller.getId());
+
+        System.out.println("\n=== TESTE 5: Seller update ===");    
+        seller = sellerDao.findById(7);
+        seller.setBaseSalary(10000.0);
+        sellerDao.update(seller);
+        System.out.println("Update completed");
     }
 }
